@@ -1,12 +1,10 @@
 package com.auth0.jwt.impl;
 
+import org.junit.jupiter.api.Test;
 import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.node.NullNode;
 import org.hamcrest.collection.IsMapContaining;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import tools.jackson.databind.node.StringNode;
 
 import java.util.HashMap;
@@ -17,9 +15,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class BasicHeaderTest {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
     
     private final DeserializationContext context = getDefaultObjectMapper()._deserializationContext();
 

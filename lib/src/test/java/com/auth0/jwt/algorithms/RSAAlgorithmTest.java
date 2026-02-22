@@ -4,9 +4,8 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.exceptions.SignatureGenerationException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.interfaces.RSAKeyProvider;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+
 
 import java.io.ByteArrayOutputStream;
 import java.security.*;
@@ -30,11 +29,6 @@ public class RSAAlgorithmTest {
     private static final String PRIVATE_KEY_FILE = "src/test/resources/rsa-private.pem";
     private static final String PUBLIC_KEY_FILE = "src/test/resources/rsa-public.pem";
     private static final String INVALID_PUBLIC_KEY_FILE = "src/test/resources/rsa-public_invalid.pem";
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
-
-    //Verify
 
     @Test
     public void shouldPassRSA256Verification() throws Exception {

@@ -1,10 +1,9 @@
 package com.auth0.jwt.impl;
 
 import com.auth0.jwt.UserPojo;
+import org.junit.jupiter.api.Test;
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.ObjectMapper;
-import org.junit.Before;
-import org.junit.Test;
 import tools.jackson.databind.SerializationContext;
 
 import java.io.StringWriter;

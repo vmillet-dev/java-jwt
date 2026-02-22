@@ -2,9 +2,7 @@ package com.auth0.jwt.algorithms;
 
 import com.auth0.jwt.interfaces.ECDSAKeyProvider;
 import com.auth0.jwt.interfaces.RSAKeyProvider;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.io.ByteArrayOutputStream;
@@ -19,10 +17,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 public class AlgorithmTest {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
-
 
     @Test
     public void shouldThrowHMAC256InstanceWithNullSecretBytes() {

@@ -5,9 +5,8 @@ import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.core.IsIterableContaining;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -21,8 +20,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class JWTDecoderTest {
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     @Test
     public void getSubject() {

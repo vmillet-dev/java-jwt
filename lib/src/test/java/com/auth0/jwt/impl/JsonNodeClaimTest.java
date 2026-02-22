@@ -3,6 +3,7 @@ package com.auth0.jwt.impl;
 import com.auth0.jwt.UserPojo;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.Claim;
+import org.junit.jupiter.api.Test;
 import tools.jackson.core.JacksonException;
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
@@ -14,14 +15,10 @@ import tools.jackson.databind.node.MissingNode;
 import tools.jackson.databind.node.NullNode;
 import tools.jackson.databind.node.ObjectNode;
 import org.hamcrest.collection.IsMapContaining;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
 import org.mockito.ArgumentMatchers;
 import tools.jackson.databind.ser.SerializationContextExt;
 
-import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;

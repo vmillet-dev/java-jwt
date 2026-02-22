@@ -5,11 +5,8 @@ import com.auth0.jwt.exceptions.SignatureGenerationException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.interfaces.ECDSAKeyProvider;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
@@ -50,9 +47,7 @@ public class ECDSABouncyCastleProviderTests {
     private static final String INVALID_PUBLIC_KEY_FILE_512 = "src/test/resources/ec512-key-public-invalid.pem";
  
     private static final String ES256K_JWT = "eyJraWQiOiJteS1rZXktaWQiLCJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.e30.2ggPsc4xwQhYcgJueo3uQ14MpaVJ3AbEE8UE-wA9fc8SMibeW54gjZbikL-JBHqhEwc22Cp8DNOtadXsM81RGQ";
-    
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
+
     private static final Provider bcProvider = new BouncyCastleProvider();
 
     //JOSE Signatures obtained using Node 'jwa' lib: https://github.com/brianloveswords/node-jwa

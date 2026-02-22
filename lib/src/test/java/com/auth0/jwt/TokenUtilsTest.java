@@ -1,17 +1,13 @@
 package com.auth0.jwt;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
+
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TokenUtilsTest {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     @Test
     public void toleratesEmptyFirstPart() {

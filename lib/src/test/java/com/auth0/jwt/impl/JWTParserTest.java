@@ -3,13 +3,11 @@ package com.auth0.jwt.impl;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.Header;
 import com.auth0.jwt.interfaces.Payload;
+import org.junit.jupiter.api.Test;
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.databind.ObjectReader;
 import tools.jackson.databind.SerializationFeature;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
 import tools.jackson.databind.json.JsonMapper;
 
 import static com.auth0.jwt.impl.JWTParser.getDefaultObjectMapper;
@@ -21,8 +19,6 @@ import static org.mockito.Mockito.when;
 
 public class JWTParserTest {
 
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
     private JWTParser parser;
 
     @Before

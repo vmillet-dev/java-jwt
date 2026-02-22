@@ -5,9 +5,7 @@ import com.auth0.jwt.exceptions.*;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.Verification;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -19,7 +17,6 @@ import java.util.function.BiPredicate;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 
 public class JWTVerifierTest {
@@ -27,9 +24,6 @@ public class JWTVerifierTest {
     private final Clock mockNow = Clock.fixed(Instant.ofEpochSecond(1477592), ZoneId.of("UTC"));
     private final Clock mockOneSecondEarlier = Clock.offset(mockNow, Duration.ofSeconds(-1));
     private final Clock mockOneSecondLater = Clock.offset(mockNow, Duration.ofSeconds(1));
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     @Test
     public void shouldThrowWhenInitializedWithoutAlgorithm() {

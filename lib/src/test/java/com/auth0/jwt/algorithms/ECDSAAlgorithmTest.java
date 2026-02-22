@@ -7,9 +7,6 @@ import com.auth0.jwt.interfaces.ECDSAKeyProvider;
 import com.auth0.jwt.interfaces.JWTVerifier;
 import org.hamcrest.Matchers;
 import org.hamcrest.collection.IsIn;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.io.ByteArrayOutputStream;
 import java.math.BigInteger;

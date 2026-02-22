@@ -6,10 +6,7 @@ import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.core.IsIterableContaining;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
 import tools.jackson.databind.node.StringNode;
 
 import java.time.Instant;
@@ -20,9 +17,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class PayloadImplTest {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     private PayloadImpl payload;
     private final Instant expiresAt = Instant.now().plusSeconds(10);

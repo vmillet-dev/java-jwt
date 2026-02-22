@@ -2,6 +2,7 @@ package com.auth0.jwt.impl;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.Payload;
+import org.junit.jupiter.api.Test;
 import tools.jackson.core.JsonParser;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.DeserializationContext;
@@ -10,10 +11,7 @@ import tools.jackson.databind.ObjectMapper;
 import tools.jackson.databind.node.*;
 import org.hamcrest.collection.IsCollectionWithSize;
 import org.hamcrest.core.IsIterableContaining;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
 import tools.jackson.databind.node.StringNode;
 
 import java.io.StringReader;
@@ -22,7 +20,6 @@ import java.util.*;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
@@ -30,8 +27,6 @@ import static org.mockito.Mockito.when;
 
 public class PayloadDeserializerTest {
 
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
     private PayloadDeserializer deserializer;
 
     private ObjectMapper objectMapper;
